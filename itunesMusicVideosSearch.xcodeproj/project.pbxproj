@@ -8,20 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		18F6E5DA1F57B363006D9DE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F6E5D91F57B363006D9DE4 /* AppDelegate.swift */; };
-		18F6E5DC1F57B363006D9DE4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F6E5DB1F57B363006D9DE4 /* ViewController.swift */; };
 		18F6E5DF1F57B363006D9DE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F6E5DD1F57B363006D9DE4 /* Main.storyboard */; };
 		18F6E5E11F57B363006D9DE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18F6E5E01F57B363006D9DE4 /* Assets.xcassets */; };
 		18F6E5E41F57B363006D9DE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F6E5E21F57B363006D9DE4 /* LaunchScreen.storyboard */; };
+		18F6E5EC1F57B5FC006D9DE4 /* NetworkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F6E5EB1F57B5FC006D9DE4 /* NetworkHandler.swift */; };
+		18F6E5EE1F57B81B006D9DE4 /* AppleEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F6E5ED1F57B81B006D9DE4 /* AppleEndPoint.swift */; };
+		18F6E5F01F57B83E006D9DE4 /* MusicVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F6E5EF1F57B83E006D9DE4 /* MusicVideo.swift */; };
+		18F6E5F21F57B874006D9DE4 /* MusicVideoClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F6E5F11F57B874006D9DE4 /* MusicVideoClient.swift */; };
+		18F6E5F61F57BEEF006D9DE4 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F6E5F51F57BEEF006D9DE4 /* SearchVC.swift */; };
+		18F6E5F81F57C611006D9DE4 /* MusicVideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F6E5F71F57C611006D9DE4 /* MusicVideoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		18F6E5D61F57B363006D9DE4 /* itunesMusicVideosSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = itunesMusicVideosSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18F6E5D91F57B363006D9DE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		18F6E5DB1F57B363006D9DE4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		18F6E5DE1F57B363006D9DE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18F6E5E01F57B363006D9DE4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18F6E5E31F57B363006D9DE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18F6E5E51F57B363006D9DE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18F6E5EB1F57B5FC006D9DE4 /* NetworkHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkHandler.swift; sourceTree = "<group>"; };
+		18F6E5ED1F57B81B006D9DE4 /* AppleEndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleEndPoint.swift; sourceTree = "<group>"; };
+		18F6E5EF1F57B83E006D9DE4 /* MusicVideo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicVideo.swift; sourceTree = "<group>"; };
+		18F6E5F11F57B874006D9DE4 /* MusicVideoClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicVideoClient.swift; sourceTree = "<group>"; };
+		18F6E5F51F57BEEF006D9DE4 /* SearchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		18F6E5F71F57C611006D9DE4 /* MusicVideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicVideoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +64,43 @@
 		18F6E5D81F57B363006D9DE4 /* itunesMusicVideosSearch */ = {
 			isa = PBXGroup;
 			children = (
-				18F6E5D91F57B363006D9DE4 /* AppDelegate.swift */,
-				18F6E5DB1F57B363006D9DE4 /* ViewController.swift */,
+				18F6E5F41F57BE4C006D9DE4 /* Controller */,
+				18F6E5F31F57BD9C006D9DE4 /* Model */,
+				18F6E5F91F57C61B006D9DE4 /* Cells */,
 				18F6E5DD1F57B363006D9DE4 /* Main.storyboard */,
 				18F6E5E01F57B363006D9DE4 /* Assets.xcassets */,
 				18F6E5E21F57B363006D9DE4 /* LaunchScreen.storyboard */,
 				18F6E5E51F57B363006D9DE4 /* Info.plist */,
 			);
 			path = itunesMusicVideosSearch;
+			sourceTree = "<group>";
+		};
+		18F6E5F31F57BD9C006D9DE4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				18F6E5EB1F57B5FC006D9DE4 /* NetworkHandler.swift */,
+				18F6E5ED1F57B81B006D9DE4 /* AppleEndPoint.swift */,
+				18F6E5EF1F57B83E006D9DE4 /* MusicVideo.swift */,
+				18F6E5F11F57B874006D9DE4 /* MusicVideoClient.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		18F6E5F41F57BE4C006D9DE4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				18F6E5D91F57B363006D9DE4 /* AppDelegate.swift */,
+				18F6E5F51F57BEEF006D9DE4 /* SearchVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		18F6E5F91F57C61B006D9DE4 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				18F6E5F71F57C611006D9DE4 /* MusicVideoCell.swift */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +174,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18F6E5DC1F57B363006D9DE4 /* ViewController.swift in Sources */,
+				18F6E5F21F57B874006D9DE4 /* MusicVideoClient.swift in Sources */,
+				18F6E5EC1F57B5FC006D9DE4 /* NetworkHandler.swift in Sources */,
+				18F6E5EE1F57B81B006D9DE4 /* AppleEndPoint.swift in Sources */,
+				18F6E5F01F57B83E006D9DE4 /* MusicVideo.swift in Sources */,
 				18F6E5DA1F57B363006D9DE4 /* AppDelegate.swift in Sources */,
+				18F6E5F61F57BEEF006D9DE4 /* SearchVC.swift in Sources */,
+				18F6E5F81F57C611006D9DE4 /* MusicVideoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
