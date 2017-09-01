@@ -2,8 +2,6 @@
 
 **ItunesMusicVideosSearch** is a universal itunes Music Video search application for iOS.
 
-Submitted by: **Mohamed Ayadi**
-
 ## User Stories
 
 The following **required** functionality is complete:
