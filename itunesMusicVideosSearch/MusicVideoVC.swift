@@ -7,6 +7,8 @@
 //
 
 import UIKit
+// Input: passedMusicVideo item and UIImage
+// Output: displays image half the screen and two text properties the remaining half equally between them 
 
 class MusicVideoVC: UIViewController {
     var passedMusicVideo: MusicVideo!

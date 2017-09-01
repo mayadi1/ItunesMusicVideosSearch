@@ -8,9 +8,11 @@
 
 import Foundation
 
+// Input: term and entity
+// Output: appleEndpoint URL
 // example: https://itunes.apple.com/search?term=jack johnson&entity=musicVideo
 
-enum AppStoreEndpoint
+enum AppleEndpoint
 {
     case search(term: String, entity: String)
     

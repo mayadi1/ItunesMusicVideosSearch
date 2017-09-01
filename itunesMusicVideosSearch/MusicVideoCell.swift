@@ -7,7 +7,8 @@
 //
 
 import UIKit
-
+// Input: MusicVideo
+// Output: cell with text and detailText with downloaded image
 class MusicVideoCell: UITableViewCell
 {
     

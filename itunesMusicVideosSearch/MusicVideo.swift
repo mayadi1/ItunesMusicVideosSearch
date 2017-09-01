@@ -7,6 +7,7 @@
 //
 
 import Foundation
+//Search Result
 
 struct MusicVideo
 {

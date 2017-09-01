@@ -7,6 +7,8 @@
 //
 
 import UIKit
+// Input: two string property and a CGRect
+// Output: display a view with two text properties inside a stackView with a distribution equally and a vertical axis
 
 class DescriptionView: UIView {
     var artistName: String!

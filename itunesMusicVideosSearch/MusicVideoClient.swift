@@ -7,13 +7,16 @@
 //
 
 import Foundation
+// Input: term, entity
+// Return: array of MusicVideo
+// Algo: Use ApplEndPoint to generate the URL and feeds it into Network handler
 
 struct MusicVideoClient
 {
     func fetchMusicVideos(withTerm term: String, inEntity entity: String, completion: @escaping ([MusicVideo]?) -> Void)
     {
         //endpoint
-        let searchEndpoint = AppStoreEndpoint.search(term: term, entity: entity)
+        let searchEndpoint = AppleEndpoint.search(term: term, entity: entity)
         let searchUrlRequest = searchEndpoint.request
         
         //network handler

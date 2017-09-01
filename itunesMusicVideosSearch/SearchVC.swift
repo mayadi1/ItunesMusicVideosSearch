@@ -7,25 +7,29 @@
 //
 
 import UIKit
+// This is the main view present search bar witht tableView showing the searchResult
 
 class SearchVC: UIViewController, UITableViewDelegate,UITableViewDataSource, UISearchResultsUpdating {
+    
     var tableView: UITableView = UITableView()
-    var musicVideos: [MusicVideo]?
+    var musicVideos: [MusicVideo]? //Array of musicVideo
     let searchController = UISearchController(searchResultsController: nil)
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Itunes music videos Search"
-        fetchMusicVideo()
+        fetchMusicVideo(term: "Jack Johnson", entity: "musicVideo")
         initializeTableView()
         setSearchController()
     }
     
-    
-    func fetchMusicVideo()
+    //fetch MusicVidew
+    //Input: term and entity
+    //Return: reloadData in tableVIew and load musicVideos array
+    func fetchMusicVideo(term: String, entity: String)
     {
         let musicVideoClient = MusicVideoClient()
-        musicVideoClient.fetchMusicVideos(withTerm: "Jack Johnson", inEntity: "musicVideo") { (musicVideos) in
+        musicVideoClient.fetchMusicVideos(withTerm: term, inEntity: entity) { (musicVideos) in
             self.musicVideos = musicVideos
             self.tableView.reloadData()
         }
@@ -60,6 +64,7 @@ class SearchVC: UIViewController, UITableViewDelegate,UITableViewDataSource, UIS
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 90
     }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         searchController.isActive = false
         let selectedMusicVideo = MusicVideoVC()
@@ -82,11 +87,7 @@ class SearchVC: UIViewController, UITableViewDelegate,UITableViewDataSource, UIS
             
         } else {
             // Update the results
-            let musicVideoClient = MusicVideoClient()
-            musicVideoClient.fetchMusicVideos(withTerm: searchController.searchBar.text!, inEntity: "musicVideo") { (musicVideos) in
-                self.musicVideos = musicVideos
-                self.tableView.reloadData()
-            }
+            fetchMusicVideo(term: searchController.searchBar.text!, entity: "musicVideo")
         }
      }
 }
