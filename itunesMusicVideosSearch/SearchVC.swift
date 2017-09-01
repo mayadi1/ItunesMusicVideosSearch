@@ -8,15 +8,17 @@
 
 import UIKit
 
-class SearchVC: UIViewController, UITableViewDelegate,UITableViewDataSource {
+class SearchVC: UIViewController, UITableViewDelegate,UITableViewDataSource, UISearchResultsUpdating {
     var tableView: UITableView = UITableView()
     var musicVideos: [MusicVideo]?
-    
+    let searchController = UISearchController(searchResultsController: nil)
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Itunes music videos Search"
         fetchMusicVideo()
         initializeTableView()
+        setSearchController()
     }
     
     
@@ -59,11 +61,32 @@ class SearchVC: UIViewController, UITableViewDelegate,UITableViewDataSource {
         return 90
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        searchController.isActive = false
         let selectedMusicVideo = MusicVideoVC()
         selectedMusicVideo.passedMusicVideo = self.musicVideos?[indexPath.row]
         selectedMusicVideo.passedImage = tableView.cellForRow(at: indexPath)?.imageView?.image
         selectedMusicVideo.modalTransitionStyle = .flipHorizontal
         navigationController?.pushViewController(selectedMusicVideo, animated: true)
     }
-
+    
+    func setSearchController(){
+        searchController.searchResultsUpdater = self
+        searchController.dimsBackgroundDuringPresentation = false
+        tableView.tableHeaderView = searchController.searchBar
+    }
+    
+    // MARK: - searchController searchResults
+    func updateSearchResults(for searchController: UISearchController) {
+        // If we haven't typed anything into the search bar then do not filter the results
+        if searchController.searchBar.text! == "" {
+            
+        } else {
+            // Update the results
+            let musicVideoClient = MusicVideoClient()
+            musicVideoClient.fetchMusicVideos(withTerm: searchController.searchBar.text!, inEntity: "musicVideo") { (musicVideos) in
+                self.musicVideos = musicVideos
+                self.tableView.reloadData()
+            }
+        }
+     }
 }
