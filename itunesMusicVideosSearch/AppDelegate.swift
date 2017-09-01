@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let searchVC = SearchVC()
         navController!.pushViewController(searchVC, animated: false)
         navController?.navigationBar.tintColor = UIColor.white
-        navController?.navigationBar.alpha = 0.1
+    
         window = UIWindow(frame: UIScreen.main.bounds)
         window!.rootViewController = navController
         window!.makeKeyAndVisible()

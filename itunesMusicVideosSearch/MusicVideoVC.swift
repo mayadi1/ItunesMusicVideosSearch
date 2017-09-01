@@ -11,6 +11,7 @@ import UIKit
 class MusicVideoVC: UIViewController {
     var passedMusicVideo: MusicVideo!
     var passedImage: UIImage!
+    var imageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +19,7 @@ class MusicVideoVC: UIViewController {
     }
     
     func setUI(){
-        let imageView = UIImageView(frame: CGRect(x: 0, y: 20, width: self.view.frame.width, height: self.view.frame.height * 0.5 - 20))
+        imageView = UIImageView(frame: CGRect(x: 0, y: 20, width: self.view.frame.width, height: self.view.frame.height * 0.5))
         imageView.image = passedImage
         imageView.contentMode = .scaleAspectFill
         view.addSubview(imageView)
@@ -27,7 +28,9 @@ class MusicVideoVC: UIViewController {
         view.addSubview(descriptionView)
     }
     
-    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.imageView.image = nil
+    }
     
 }
 
