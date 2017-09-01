@@ -19,9 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
       
         navController = UINavigationController()
-        navController?.navigationBar.backgroundColor = UIColor.red
+        navController?.navigationBar.backgroundColor = UIColor.darkGray
         let searchVC = SearchVC()
         navController!.pushViewController(searchVC, animated: false)
+        navController?.navigationBar.tintColor = UIColor.white
+        navController?.navigationBar.alpha = 0.1
         window = UIWindow(frame: UIScreen.main.bounds)
         window!.rootViewController = navController
         window!.makeKeyAndVisible()

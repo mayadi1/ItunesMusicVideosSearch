@@ -58,6 +58,12 @@ class SearchVC: UIViewController, UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 90
     }
-
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedMusicVideo = MusicVideoVC()
+        selectedMusicVideo.passedMusicVideo = self.musicVideos?[indexPath.row]
+        selectedMusicVideo.passedImage = tableView.cellForRow(at: indexPath)?.imageView?.image
+        selectedMusicVideo.modalTransitionStyle = .flipHorizontal
+        navigationController?.pushViewController(selectedMusicVideo, animated: true)
+    }
 
 }

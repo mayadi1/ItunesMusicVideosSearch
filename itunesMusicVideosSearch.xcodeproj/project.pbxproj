@@ -17,6 +17,8 @@
 		18F6E5F21F57B874006D9DE4 /* MusicVideoClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F6E5F11F57B874006D9DE4 /* MusicVideoClient.swift */; };
 		18F6E5F61F57BEEF006D9DE4 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F6E5F51F57BEEF006D9DE4 /* SearchVC.swift */; };
 		18F6E5F81F57C611006D9DE4 /* MusicVideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F6E5F71F57C611006D9DE4 /* MusicVideoCell.swift */; };
+		18F6E5FD1F580879006D9DE4 /* MusicVideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F6E5FC1F580879006D9DE4 /* MusicVideoVC.swift */; };
+		18F6E5FF1F58FF38006D9DE4 /* DescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F6E5FE1F58FF38006D9DE4 /* DescriptionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		18F6E5F11F57B874006D9DE4 /* MusicVideoClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicVideoClient.swift; sourceTree = "<group>"; };
 		18F6E5F51F57BEEF006D9DE4 /* SearchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		18F6E5F71F57C611006D9DE4 /* MusicVideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicVideoCell.swift; sourceTree = "<group>"; };
+		18F6E5FC1F580879006D9DE4 /* MusicVideoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicVideoVC.swift; sourceTree = "<group>"; };
+		18F6E5FE1F58FF38006D9DE4 /* DescriptionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,10 +71,8 @@
 				18F6E5F41F57BE4C006D9DE4 /* Controller */,
 				18F6E5F31F57BD9C006D9DE4 /* Model */,
 				18F6E5F91F57C61B006D9DE4 /* Cells */,
-				18F6E5DD1F57B363006D9DE4 /* Main.storyboard */,
-				18F6E5E01F57B363006D9DE4 /* Assets.xcassets */,
-				18F6E5E21F57B363006D9DE4 /* LaunchScreen.storyboard */,
-				18F6E5E51F57B363006D9DE4 /* Info.plist */,
+				18F6E5FA1F58047A006D9DE4 /* View */,
+				18F6E5FB1F580487006D9DE4 /* Resources */,
 			);
 			path = itunesMusicVideosSearch;
 			sourceTree = "<group>";
@@ -82,6 +84,7 @@
 				18F6E5ED1F57B81B006D9DE4 /* AppleEndPoint.swift */,
 				18F6E5EF1F57B83E006D9DE4 /* MusicVideo.swift */,
 				18F6E5F11F57B874006D9DE4 /* MusicVideoClient.swift */,
+				18F6E6001F5905C0006D9DE4 /* View */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -91,6 +94,7 @@
 			children = (
 				18F6E5D91F57B363006D9DE4 /* AppDelegate.swift */,
 				18F6E5F51F57BEEF006D9DE4 /* SearchVC.swift */,
+				18F6E5FC1F580879006D9DE4 /* MusicVideoVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -101,6 +105,32 @@
 				18F6E5F71F57C611006D9DE4 /* MusicVideoCell.swift */,
 			);
 			name = Cells;
+			sourceTree = "<group>";
+		};
+		18F6E5FA1F58047A006D9DE4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				18F6E5DD1F57B363006D9DE4 /* Main.storyboard */,
+				18F6E5E21F57B363006D9DE4 /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		18F6E5FB1F580487006D9DE4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				18F6E5E01F57B363006D9DE4 /* Assets.xcassets */,
+				18F6E5E51F57B363006D9DE4 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		18F6E6001F5905C0006D9DE4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				18F6E5FE1F58FF38006D9DE4 /* DescriptionView.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,6 +164,7 @@
 				TargetAttributes = {
 					18F6E5D51F57B363006D9DE4 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = PE9MW7PNB5;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -177,9 +208,11 @@
 				18F6E5F21F57B874006D9DE4 /* MusicVideoClient.swift in Sources */,
 				18F6E5EC1F57B5FC006D9DE4 /* NetworkHandler.swift in Sources */,
 				18F6E5EE1F57B81B006D9DE4 /* AppleEndPoint.swift in Sources */,
+				18F6E5FF1F58FF38006D9DE4 /* DescriptionView.swift in Sources */,
 				18F6E5F01F57B83E006D9DE4 /* MusicVideo.swift in Sources */,
 				18F6E5DA1F57B363006D9DE4 /* AppDelegate.swift in Sources */,
 				18F6E5F61F57BEEF006D9DE4 /* SearchVC.swift in Sources */,
+				18F6E5FD1F580879006D9DE4 /* MusicVideoVC.swift in Sources */,
 				18F6E5F81F57C611006D9DE4 /* MusicVideoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,6 +336,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = PE9MW7PNB5;
 				INFOPLIST_FILE = itunesMusicVideosSearch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ayadios.itunesMusicVideosSearch;
@@ -315,6 +349,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = PE9MW7PNB5;
 				INFOPLIST_FILE = itunesMusicVideosSearch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ayadios.itunesMusicVideosSearch;
